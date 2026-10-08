@@ -1,0 +1,4 @@
+const btn=document.querySelector('.menu-button');const menu=document.querySelector('.mobile-nav');
+if(btn&&menu){btn.addEventListener('click',()=>{const open=menu.classList.toggle('open');btn.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-hidden',String(!open));});}
+const reveal=[...document.querySelectorAll('.reveal')];
+if('IntersectionObserver'in window){const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);}});},{threshold:.08});reveal.forEach(el=>obs.observe(el));}else{reveal.forEach(el=>el.classList.add('in'));}
