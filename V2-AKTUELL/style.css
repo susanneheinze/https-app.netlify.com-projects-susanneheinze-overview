@@ -14,11 +14,11 @@ button{font:inherit}
 .brand{font-family:Georgia,"Times New Roman",serif;font-style:italic;font-size:1.95rem;font-weight:700;letter-spacing:-.04em;line-height:1;background:linear-gradient(105deg,var(--navy) 0%,var(--blue) 58%,var(--gold) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;white-space:nowrap}
 .brand span{font-weight:400}
 .desktop-nav{display:flex;align-items:center;gap:26px}
-.desktop-nav a{font-size:1rem;color:#46515d;position:relative;padding:30px 0 26px}
+.desktop-nav a{font-size:1rem;color:var(--navy);position:relative;padding:30px 0 26px;font-weight:600;transition:color .2s ease}
 .desktop-nav a::after{content:"";position:absolute;left:0;right:100%;bottom:19px;height:1px;background:var(--gold);transition:right .2s ease}
 .desktop-nav a:hover::after,.desktop-nav a.active::after{right:0}
-.desktop-nav a.active{color:var(--navy);font-weight:700}
-.menu-button{display:none;font-size:1rem;border:1px solid var(--navy);background:transparent;color:var(--navy);border-radius:999px;padding:9px 16px;cursor:pointer}
+.desktop-nav a:hover,.desktop-nav a.active{color:var(--gold)}.desktop-nav a.active{font-weight:800}
+.menu-button{display:none;font-size:1rem;border:1px solid var(--gold);background:var(--gold);color:var(--navy);border-radius:999px;padding:9px 16px;cursor:pointer;font-weight:800;box-shadow:0 6px 18px rgba(207,150,61,.18);transition:background .2s ease,color .2s ease,transform .2s ease}.menu-button:hover{background:var(--navy);border-color:var(--navy);color:var(--white);transform:translateY(-1px)}
 .mobile-nav{display:none;padding:14px 4vw 24px;border-top:1px solid var(--line);background:var(--paper)}
 .mobile-nav.open{display:grid}
 .mobile-nav a{padding:14px 0;font-size:1.05rem;border-bottom:1px solid var(--line);color:var(--navy)}
@@ -99,7 +99,7 @@ button{font:inherit}
 .mosaic-wide img{aspect-ratio:2.2/1}
 .mosaic-tall img{aspect-ratio:4/5}
 .mosaic-fill img{aspect-ratio:4/5}
-.homepage-showcase{margin:0;max-width:1080px}
+.homepage-showcase{margin:0 auto;max-width:860px}
 .homepage-showcase img{width:100%;height:auto}
 .video-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
 .video-panel{background:#0b1118;padding:14px}
